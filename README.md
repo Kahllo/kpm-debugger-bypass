@@ -1,9 +1,19 @@
-# kpm-debugger-bypass
-Bypass Android anti-debug using KPM
+🔐 kpm-debugger-bypass
+Bypass Android anti-debug protections using a lightweight KPM (KernelPatch Module).
 
-Load the module in APatch KPM manager. 
-APatch show how to it here : https://apatch.dev/kpm-usage-guide.html#embed
+This module intercepts access to key files like /proc/self/status and /proc/self/task/*/status, commonly used by apps to detect debuggers. With this, you can stay under the radar—even when LLDB is attached.
 
-After you load the module you can see the logs of the module with: 
+🚀 Usage
+Load the module using APatch KPM Manager
+👉 Follow the guide: https://apatch.dev/kpm-usage-guide.html#embed
 
-<pre> dmesg -w | grep "kpm-debugger-bypass"  </pre>
+Once loaded, view logs using:
+
+sh
+Copy
+Edit
+dmesg -w | grep "kpm-debugger-bypass"
+🧠 Learn More
+📖 Full write-up with code breakdown and real-world testing:
+Read the blog on Medium
+
