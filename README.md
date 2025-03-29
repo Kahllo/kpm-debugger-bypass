@@ -27,5 +27,5 @@ These files are commonly used by apps to detect debuggers. With this module load
 
 📝 Full write-up with deep explanation, code snippets, and testing examples:
 
-👉 Read the blog on [Medium](https://medium.com/@omerqw23451/c4f2f92bd6fa)
+👉 Read the blog on [Medium]([https://medium.com/@omerqw23451/c4f2f92bd6fa](https://medium.com/@omerqw23451/%EF%B8%8F-android-anti-debugger-bypass-with-kpm-a-practical-fun-deep-dive-c4f2f92bd6fa))
 
