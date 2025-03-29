@@ -1,19 +1,31 @@
-🔐 kpm-debugger-bypass
-Bypass Android anti-debug protections using a lightweight KPM (KernelPatch Module).
+# 🔐 kpm-debugger-bypass
 
-This module intercepts access to key files like /proc/self/status and /proc/self/task/*/status, commonly used by apps to detect debuggers. With this, you can stay under the radar—even when LLDB is attached.
+Bypass Android anti-debug protections using a lightweight **KPM (KernelPatch Module)**.
 
-🚀 Usage
-Load the module using APatch KPM Manager
-👉 Follow the guide: https://apatch.dev/kpm-usage-guide.html#embed
+This module hooks the `openat` syscall in the kernel and blocks access to:
 
-Once loaded, view logs using:
+- `/proc/self/status`
+- `/proc/self/task/*/status`
 
-sh
-Copy
-Edit
-dmesg -w | grep "kpm-debugger-bypass"
-🧠 Learn More
-📖 Full write-up with code breakdown and real-world testing:
-Read the blog on Medium
+These files are commonly used by apps to detect debuggers. With this module loaded, tools like **LLDB** can attach without triggering detection.
+
+---
+
+## 🚀 Usage
+
+1. Load the module using **APatch KPM Manager**  
+   📘 [Usage Guide →](https://apatch.dev/kpm-usage-guide.html#embed)
+
+2. After loading the module, check logs with:
+
+   ```sh
+   dmesg -w | grep "kpm-debugger-bypass"
+
+---
+
+# 🧠 Learn More
+
+📝 Full write-up with deep explanation, code snippets, and testing examples:
+
+👉 Read the blog on [Medium](https://medium.com/@omerqw23451/c4f2f92bd6fa)
 
